@@ -3,13 +3,17 @@ import styled from "styled-components";
 import check from "../../../assets/svg/check.svg";
 import COLOR from "../../../variables/color";
 
-export const Checkbox = ({ onClick }) => {
+const Checkbox = ({ onClick }) => {
   return (
     <StyledCheckbox onClick={onClick}>
       <img src={check} className="check" />
     </StyledCheckbox>
   );
 };
+
+Checkbox.displayName = "Checkbox";
+
+export default Checkbox;
 
 const StyledCheckbox = styled.button`
   display: flex;
