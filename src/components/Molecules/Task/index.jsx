@@ -57,15 +57,16 @@ const StyledNameAndEditButtonWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-left: 10px;
+  width: 100%;
 `;
 
 const StyledTaskName = styled.p`
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S}
   margin: 0px;
+  width: 100%;
 `;
 
 const StyledEditButtonWrapper = styled.div`
-  width: 100%;
   margin-left: 10px;
 `;
