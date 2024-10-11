@@ -7,7 +7,12 @@ import Input from "../../Atoms/Input";
 import EditButton from "../../Atoms/EditButton";
 import pencil from "../../../assets/svg/pencil.svg";
 
-const Task = ({ onTaskNameChange, onTaskComplete, taskName = "", defaultIsEditing = false }) => {
+const Task = ({
+  onTaskNameChange,
+  onTaskComplete,
+  taskName = "",
+  defaultIsEditing = false,
+}) => {
   const [isEditing, setIsEditing] = useState(defaultIsEditing);
 
   const handleEditComplete = (value) => {
@@ -22,18 +27,20 @@ const Task = ({ onTaskNameChange, onTaskComplete, taskName = "", defaultIsEditin
       <StyledCheckboxWrapper>
         <Checkbox onClick={onTaskComplete} />
       </StyledCheckboxWrapper>
-      {isEditing ? (
-        <Input value={taskName} onEditComplete={handleEditComplete} />
-      ) : (
-        <StyledNameAndEditButtonWrapper>
-          <StyledTaskName>{taskName}</StyledTaskName>
-          <StyledEditButtonWrapper>
-            <EditButton onClick={handleEditButtonClick}>
-              <img src={pencil} alt="Edit task" />
-            </EditButton>
-          </StyledEditButtonWrapper>
-        </StyledNameAndEditButtonWrapper>
-      )}
+      <StyledNameAndEditButtonWrapper>
+        {isEditing ? (
+          <Input value={taskName} onEditComplete={handleEditComplete} />
+        ) : (
+          <>
+            <StyledTaskName>{taskName}</StyledTaskName>
+            <StyledEditButtonWrapper>
+              <EditButton onClick={handleEditButtonClick}>
+                <img src={pencil} alt="Edit task" />
+              </EditButton>
+            </StyledEditButtonWrapper>
+          </>
+        )}
+      </StyledNameAndEditButtonWrapper>
     </StyledWrapper>
   );
 };
@@ -45,7 +52,6 @@ export default Task;
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 10px;
 `;
 
 const StyledCheckboxWrapper = styled.div`
@@ -69,4 +75,5 @@ const StyledTaskName = styled.p`
 
 const StyledEditButtonWrapper = styled.div`
   margin-left: 10px;
+  display: flex;
 `;
