@@ -2,9 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 
-export const EditButton = (props) => {
+const EditButton = (props) => {
   return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
 };
+
+EditButton.displayName = "EditButton";
+
+export default EditButton;
 
 const StyledButton = styled.button`
   border: none;

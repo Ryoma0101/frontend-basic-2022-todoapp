@@ -41,7 +41,7 @@ const StyledInput = styled.input`
   text: ${TEXT.S};
   font-family: ${FONTFAMILY.NOTO_SANS};
   width: 100%;
-  padding: 0px 4px;
+  padding: 0px;
   flex-direction: column;
   align-items: flex-start;
   border: none;
