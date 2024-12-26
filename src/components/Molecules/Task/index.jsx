@@ -56,13 +56,12 @@ const StyledWrapper = styled.div`
 
 const StyledCheckboxWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  margin-right: 10px;
 `;
 
 const StyledNameAndEditButtonWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 10px;
   width: 100%;
 `;
 
@@ -74,6 +73,5 @@ const StyledTaskName = styled.p`
 `;
 
 const StyledEditButtonWrapper = styled.div`
-  margin-left: 10px;
   display: flex;
 `;
