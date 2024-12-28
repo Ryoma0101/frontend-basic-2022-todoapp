@@ -31,17 +31,17 @@ const Button = styled.button`
     opacity: 0.2;
     content: "";
     position: absolute;
-    width: 100%;
+    width: 9.5em;
     height: 100%;
     border-radius: 12px;
     left: -1px;
   }
-  `;
+`;
 
 const PlusButton = styled.img`
   width: 20px;
   height: 20px;
-  `;
+`;
 
 const AddTaskText = styled.p`
   margin: 0;
