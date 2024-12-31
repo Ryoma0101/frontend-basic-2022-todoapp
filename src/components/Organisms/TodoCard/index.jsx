@@ -54,7 +54,7 @@ const StyledWrapper = styled.div`
   gap: 10px;
   padding: 20px;
   border-radius: 4px;
-  background-color: ${COLOR.BLACK};
+  background-color: ${COLOR.LIGHT_BLACK};
 `;
 
 const StyledTaskList = styled.div`
