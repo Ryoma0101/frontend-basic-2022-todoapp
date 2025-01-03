@@ -52,6 +52,7 @@ export default Task;
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
+  padding: 2px 6px;
 `;
 
 const StyledCheckboxWrapper = styled.div`
