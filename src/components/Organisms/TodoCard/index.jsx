@@ -51,7 +51,7 @@ export default TodoCard;
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  // gap: 10px;
   padding: 20px;
   border-radius: 4px;
   background-color: ${COLOR.LIGHT_BLACK};
@@ -61,4 +61,7 @@ const StyledTaskList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  &:not(:empty) {
+    margin-top: 10px;
+  }
 `;
