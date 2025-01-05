@@ -29,7 +29,11 @@ const Task = ({
       </StyledCheckboxWrapper>
       <StyledNameAndEditButtonWrapper>
         {isEditing ? (
-          <Input value={taskName} onEditComplete={handleEditComplete} />
+          <Input
+            value={taskName}
+            defaultValue={taskName}
+            onEditComplete={handleEditComplete}
+          />
         ) : (
           <>
             <StyledTaskName>{taskName}</StyledTaskName>
