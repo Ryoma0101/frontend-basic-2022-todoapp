@@ -12,6 +12,7 @@
     "build-storybook": "storybook build -s ./src",
     "chromatic": "npx chromatic --project-token=072222ef1ac3"
   },
+  "homepage": "https://Ryoma0101.github.io/frontend-basic-2022-todoapp",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.22.15",
