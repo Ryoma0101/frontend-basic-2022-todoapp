@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Task from "./../../Molecules/Task";
 import { AddTaskButton } from "./../../Atoms/AddTaskButton";
 import COLOR from "./../../../variables/color";
 
+const STORAGE_KEY = "todo-app-tasks";
+
 const TodoCard = ({ tasks = [] }) => {
-  const [taskList, setTaskList] = useState(tasks);
+  const [taskList, setTaskList] = useState(() => {
+    const savedTasks = localStorage.getItem(STORAGE_KEY);
+    return savedTasks ? JSON.parse(savedTasks) : tasks;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(taskList));
+  }, [taskList]);
 
   const onAddTaskButtonClick = () => {
     setTaskList([...taskList, { name: "", initializing: true }]);
